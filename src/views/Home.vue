@@ -22,6 +22,11 @@ export default {
     ModuleB,
     ModuleC,
     ModuleD
+  },
+  mounted(){
+    // if(!localStorage.getItem('token')){
+    //   this.$router.push('/login');
+    // }
   }
 }
 </script>

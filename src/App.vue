@@ -14,13 +14,14 @@
           transition="scale-transition"
           width="40"
         />
-        <v-toolbar-title>Title</v-toolbar-title>       
+        <v-toolbar-title>Message App</v-toolbar-title>       
       </div>
       <v-spacer></v-spacer>
+      
      
     </v-app-bar>
      <v-content>
-     <router-view></router-view>
+     <router-view/>
     </v-content>
   </v-app>
 </template>

@@ -11,12 +11,15 @@
         >
           <div>
             <h3 class="headline mb-0">Module C</h3>
-            <h4 class="subtitle-1">Vulnerability 3</h4>
+            <h4 class="subtitle-1">Message History</h4>
           </div>
         </v-card-title>
 
         <v-card-text>
-          <div id="desc">component body</div>
+           <v-btn
+              class="mr-4"
+              @click="view"
+            >Click to view</v-btn>
         </v-card-text>
       </v-card>
     </v-hover>
@@ -27,7 +30,10 @@ export default {
   name: "ModuleC",
   props: {},
   methods: {
-    clicked: function() {}
+    view: function() {
+      let username = localStorage.getItem('user')
+      this.$router.push(`/history/${username}`)
+    }
   }
 };
 </script>
