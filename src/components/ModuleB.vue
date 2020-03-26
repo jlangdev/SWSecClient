@@ -16,7 +16,8 @@
         </v-card-title>
 
         <v-card-text>
-          <span v-html="newestMessage"></span>
+          <!-- <span v-html="newestMessage"></span> -->
+          {{newestMessage}}
         </v-card-text>
       </v-card>
     </v-hover>
@@ -46,7 +47,8 @@ export default {
       .then(response => {
         console.log(response);
         if (response.status == 200) {
-          instance.newestMessage = `<blockquote class="blockquote">${response.data.response.message}</blockquote>`
+          //instance.newestMessage = `<blockquote class="blockquote">${response.data.response.message}</blockquote>`
+          instance.newestMessage = response.data.response.message
         }
       })
       .catch(err => {
